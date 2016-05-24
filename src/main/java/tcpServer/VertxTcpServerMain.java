@@ -1,6 +1,5 @@
 package tcpServer;
 
-import httpServer.VertxHttpClientVerticle;
 import io.vertx.core.Vertx;
 
 /**
@@ -11,5 +10,6 @@ public class VertxTcpServerMain {
         Vertx vertx = Vertx.vertx();
 
         vertx.deployVerticle(new VertxTcpServerVerticle());
+        vertx.deployVerticle(new VertxTcpClientVerticle());
     }
 }
